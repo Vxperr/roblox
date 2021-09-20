@@ -61,7 +61,7 @@ game:GetService("RunService").Stepped:Connect(function()
                     v.Drawing.Visible = false
                 end
                 if v.Part.Parent ~= nil and v.Part.Parent:FindFirstChildOfClass("ClickDetector") then
-                    if game.Players.LocalPlayer:DistanceFromCharacter(v.Part.Position) <= 15 then
+                    if game.Players.LocalPlayer:DistanceFromCharacter(v.Part.Position) <= 10 then
                         fireclickdetector(v.Part.Parent:FindFirstChildOfClass("ClickDetector"))
                     end
                 end
