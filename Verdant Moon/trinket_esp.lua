@@ -54,14 +54,14 @@ game:GetService("RunService").Stepped:Connect(function()
         if v.Drawing ~= nil then
             if v.Part ~= nil and v.Part.Parent ~= nil then
                 local ScreenPos,OnScreen = game.Workspace.CurrentCamera:WorldToScreenPoint(v.Part.Position)
-                if OnScreen and game.Players.LocalPlayer:DistanceFromCharacter(v.Part.Position) <= 1000 then
+                if OnScreen and game.Players.LocalPlayer:DistanceFromCharacter(v.Part.Position) <= 750 then
                     v.Drawing.Visible = true
                     v.Drawing.Position = Vector2.new(ScreenPos.X,ScreenPos.Y)
                 else
                     v.Drawing.Visible = false
                 end
                 if v.Part.Parent ~= nil and v.Part.Parent:FindFirstChildOfClass("ClickDetector") then
-                    if game.Players.LocalPlayer:DistanceFromCharacter(v.Part.Position) <= 10 then
+                    if game.Players.LocalPlayer:DistanceFromCharacter(v.Part.Position) <= 15 then
                         fireclickdetector(v.Part.Parent:FindFirstChildOfClass("ClickDetector"))
                     end
                 end
